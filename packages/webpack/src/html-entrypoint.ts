@@ -105,10 +105,12 @@ export class HTMLEntrypoint {
             } else if (!fastboot || base === fastboot) {
               // no specialized fastboot variant
               let src = this.publicAssetURL + base;
+              console.log({ publicAssetURL: this.publicAssetURL, base });
               placeholder.insertURL(src);
             } else {
               // we have both and they differ
               let src = this.publicAssetURL + base;
+              console.log({ src });
               let element = placeholder.insertURL(src);
               if (element) {
                 element.setAttribute('data-fastboot-src', this.publicAssetURL + fastboot);

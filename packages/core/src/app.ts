@@ -449,6 +449,8 @@ export class AppBuilder<TreeNames> {
       html.insertStyleLink(html.implicitStyles, implicitStyles.relativePath);
     }
 
+    console.log('before: ' + html.dom.window.document.querySelector('script[src*="vendor"]')?.getAttribute('src'));
+
     if (!asset.fileAsset.includeTests) {
       return;
     }
@@ -467,6 +469,8 @@ export class AppBuilder<TreeNames> {
     if (implicitTestStylesAsset) {
       html.insertStyleLink(html.implicitTestStyles, implicitTestStylesAsset.relativePath);
     }
+
+    console.log('after:  ' + html.dom.window.document.querySelector('script[src*="vendor"]')?.getAttribute('src'));
   }
 
   private implicitScriptsAsset(

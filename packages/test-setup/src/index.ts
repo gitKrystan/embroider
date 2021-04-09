@@ -41,7 +41,7 @@ export function maybeEmbroider(app: any, opts: PipelineOptions<EmberWebpackOptio
       throw new Error(`No such scenario EMBROIDER_TEST_SETUP_OPTIONS=${process.env.EMBROIDER_TEST_SETUP_OPTIONS}`);
     }
   }
-
+  console.log({ app, Webpack, opts });
   return Compat.compatBuild(app, Webpack, opts);
 }
 

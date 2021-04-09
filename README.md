@@ -36,7 +36,7 @@ We are rapidly nearing a 1.0 release, and several large, heavily-tested Ember ap
 - you're likely to discover some Ember addons don't work or break your build
 - Embroider's own configuration options are subject to change, so you'll need
   to read the CHANGELOG.md when updating the Embroider packages.
-  
+
 Alternatively, it is totally safe to stick with the traditional build pipeline and wait for the official cutover point when EmberCLI starts generating new apps with Embroider by default.
 
 ## For Addon Authors

@@ -104,7 +104,9 @@ const Webpack: Packager<Options> = class Webpack implements PackagerInstance {
     let resolvableExtensions = meta['resolvable-extensions'];
     let entrypoints = [];
     let otherAssets = [];
-    let publicAssetURL = this.publicAssetURL || rootURL;
+    let publicAssetURL = this.publicAssetURL ?? rootURL;
+
+    console.log({ publicAssetURL: this.publicAssetURL, rootURL });
 
     for (let relativePath of meta.assets) {
       if (/\.html/i.test(relativePath)) {

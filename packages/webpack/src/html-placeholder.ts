@@ -60,6 +60,7 @@ export default class Placeholder {
       // all other attributes are copied forward unchanged
       newTag.setAttribute(name, value);
     }
+    console.trace('insertScriptTag: ' + src);
     newTag.src = src;
     this.insert(newTag);
     this.insertNewline();
